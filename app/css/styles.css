@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  box-sizing: border-box; }
+
+.loginWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; }
+  .loginWrap::before {
+    content: url("../img/peopleNshapes/Polygon 4.png");
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .loginWrap::after {
+    content: url("../img/peopleNshapes/bigYellow.png");
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .loginWrap .imageWrap {
+    margin-top: -15vh;
+    padding: 2rem; }
+    .loginWrap .imageWrap::before {
+      content: url("../img/peopleNshapes/purpleFloating.png");
+      position: absolute;
+      top: 7vh;
+      right: 5vw; }
+    .loginWrap .imageWrap::after {
+      content: url("../img/peopleNshapes/purpleRight.png");
+      position: absolute;
+      bottom: 25vh;
+      right: 0; }
+  .loginWrap .loginForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%; }
+    .loginWrap .loginForm::before {
+      content: url("../img/peopleNshapes/purpleLeft.png");
+      position: absolute;
+      bottom: 10vh;
+      left: 0; }
+    .loginWrap .loginForm::after {
+      content: url("../img/peopleNshapes/limeBottom.png");
+      position: absolute;
+      bottom: -.5vh;
+      right: 10vw; }
+    .loginWrap .loginForm input {
+      min-width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #FAFF00;
+      margin: 1rem 0;
+      padding: .5rem 0; }
+      .loginWrap .loginForm input::placeholder {
+        opacity: 0.5; }
+    .loginWrap .loginForm button {
+      background-color: #FAFF00;
+      border: none;
+      border-radius: 4px;
+      width: 40%;
+      padding: .5rem 1rem;
+      font-weight: 700; }
+
+.feedHeader {
+  display: flex; }
+  .feedHeader .profilePic {
+    background-color: #FAFF00;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem; }
