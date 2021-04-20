@@ -1,97 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
-$primary:#FAFF00;
-
-
-body{
-  font-family: 'Roboto', sans-serif;
-  position: relative;
+$primary: #faff00;
+$secondary: #dd00f0;
+*{
   box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
   
 }
-.loginWrap{
+.loginWrap {
   position: relative;
   display: flex;
   flex-direction: column;
-  height:100vh;
+  height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
   background-color: #000;
-  &::before{
-    content: url('../img/peopleNshapes/Polygon\ 4.png');
+  &::before {
+    content: url("../img/peopleNshapes/Polygon\ 4.png");
     position: absolute;
-    top:0;
-    left:0;
-    }
-  &::after{
-    content: url('../img/peopleNshapes/bigYellow.png');
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: url("../img/peopleNshapes/bigYellow.png");
     position: absolute;
-    top:0;
-    left:0;
-    }
+    top: 0;
+    left: 0;
+  }
   .imageWrap {
-    margin-top:-15vh;
-    padding:2rem;
-    &::before{
-      content: url('../img/peopleNshapes/purpleFloating.png');
+    margin-top: -15vh;
+    padding: 2rem;
+    &::before {
+      content: url("../img/peopleNshapes/purpleFloating.png");
       position: absolute;
-      top:7vh;
-      right:5vw;
+      top: 7vh;
+      right: 5vw;
     }
-    &::after{
-      content: url('../img/peopleNshapes/purpleRight.png');
+    &::after {
+      content: url("../img/peopleNshapes/purpleRight.png");
       position: absolute;
-      bottom:25vh;
-      right:0;
+      bottom: 25vh;
+      right: 0;
     }
-  }  
-  .loginForm{
+  }
+  .loginForm {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width:70%;
-    &::before{
-      content: url('../img/peopleNshapes/purpleLeft.png');
+    width: 70%;
+    &::before {
+      content: url("../img/peopleNshapes/purpleLeft.png");
       position: absolute;
-      bottom:10vh;
-      left:0;
+      bottom: 10vh;
+      left: 0;
     }
-    &::after{
-      content: url('../img/peopleNshapes/limeBottom.png');
+    &::after {
+      content: url("../img/peopleNshapes/limeBottom.png");
       position: absolute;
-      bottom:-.5vh;
-      right:10vw;
+      bottom: -0.5vh;
+      right: 10vw;
     }
     input {
-      min-width:100%;
+      min-width: 100%;
       background: transparent;
-      border:none;
+      border: none;
       border-bottom: 1px solid $primary;
       margin: 1rem 0;
-      padding:.5rem 0;
-     
-      &::placeholder{
+      padding: 0.5rem 0;
+      color: #fff;
+      &::placeholder {
         opacity: 0.5;
       }
     }
-    button{
+    button {
       background-color: $primary;
       border: none;
       border-radius: 4px;
       width: 40%;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       font-weight: 700;
     }
   }
 }
+.feedWrap {
+  position: relative;
+  background: url("../img/peopleNshapes/newTweetBG.png");
+  background-repeat: no-repeat;
+  background-position:  bottom 100% right;
+  height:100vh;
+  flex:1;
+  .feedHeader {
+    display: flex;
+    color: #fff;
+    .profilePic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem;
+      overflow: hidden;
 
-.feedHeader{
-  display:flex;
-  .profilePic{
-    background-color: $primary;
+      img{
+        max-width: 110%;
+      }
+    }
+    .userDetails {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      border-bottom: 1px solid $secondary;
+      margin-bottom: 1.1rem;
+      margin-right: 1rem;
+      h2 {
+        position: relative;
+        margin-bottom: 0;
+
+        span {
+          position: relative;
+          &:after {
+            position: absolute;
+            border-bottom: 1px solid #fff;
+            left: 0;
+            bottom: -3.4rem;
+            height: 1px;
+            width: 100%;
+            content: "";
+          }
+        }
+      }
+
+      .nameLocation,
+      .follow {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        font-weight: 100;
+        p {
+          margin-top: 0;
+        }
+      }
+      .follow{
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+  .tweetWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    flex:1;
+    .tweet{
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items:center;
+      width:80%;
+      background-color: #fff;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      overflow: hidden;
+      .tweetHeader{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        background-color:$primary;
+        padding:0 .5rem;
+        width:100%;
+        
+        
+      }
+      .tweetBody{
+        padding:1rem;
+        font-weight: 300;
+      
+      }
+      .tweetCta{
+        display: flex;
+        justify-content:space-around;
+        width:100%;
+        border-top: 2px solid #eee;
+        button{
+          display: flex;
+          justify-content:space-between;
+          align-items: center;
+          background-color:transparent;
+          border: none;
+          margin: .5rem 0;
+          h3{
+            margin:0;
+            padding:.1rem;
+            color:$secondary;
+          }
+        }
+      }
+    }
+    .newComment{
+      width:80%;
+      .commentText{
+        display: flex;
+        flex-direction: column;
+        
+        .addNewComment{
+          padding:1rem;
+          border-radius: 7px;
+          border:1px solid rgb(164, 164, 164);
+        }
+        button{
+          display: flex;
+          justify-content:center;
+          align-self: flex-end;
+          margin-top: 1rem;
+          padding:.5rem 2rem;
+          background-color: #000;
+          color:$primary;
+          border:none;
+          border-radius: 4px;
+
+        }
+      }
+    }
+  }
+  .newTweet{
+    position:sticky;
+    bottom:1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    align-self: flex-end;
+    background-color:#000;
+    width:4rem;
+    height:4rem;
+    border:3px solid $primary;
     border-radius: 50%;
-    width:2rem;
-    height:2rem;
   }
 }

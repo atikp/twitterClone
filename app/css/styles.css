@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
-body {
-  font-family: 'Roboto', sans-serif;
-  position: relative;
+* {
   box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative; }
 
 .loginWrap {
   position: relative;
@@ -49,29 +51,153 @@ body {
     .loginWrap .loginForm::after {
       content: url("../img/peopleNshapes/limeBottom.png");
       position: absolute;
-      bottom: -.5vh;
+      bottom: -0.5vh;
       right: 10vw; }
     .loginWrap .loginForm input {
       min-width: 100%;
       background: transparent;
       border: none;
-      border-bottom: 1px solid #FAFF00;
+      border-bottom: 1px solid #faff00;
       margin: 1rem 0;
-      padding: .5rem 0; }
+      padding: 0.5rem 0;
+      color: #fff; }
       .loginWrap .loginForm input::placeholder {
         opacity: 0.5; }
     .loginWrap .loginForm button {
-      background-color: #FAFF00;
+      background-color: #faff00;
       border: none;
       border-radius: 4px;
       width: 40%;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       font-weight: 700; }
 
-.feedHeader {
-  display: flex; }
-  .feedHeader .profilePic {
-    background-color: #FAFF00;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem; }
+.feedWrap {
+  position: relative;
+  background: url("../img/peopleNshapes/newTweetBG.png");
+  background-repeat: no-repeat;
+  background-position: bottom 100% right;
+  height: 100vh;
+  flex: 1; }
+  .feedWrap .feedHeader {
+    display: flex;
+    color: #fff; }
+    .feedWrap .feedHeader .profilePic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #faff00;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem;
+      overflow: hidden; }
+      .feedWrap .feedHeader .profilePic img {
+        max-width: 110%; }
+    .feedWrap .feedHeader .userDetails {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      border-bottom: 1px solid #dd00f0;
+      margin-bottom: 1.1rem;
+      margin-right: 1rem; }
+      .feedWrap .feedHeader .userDetails h2 {
+        position: relative;
+        margin-bottom: 0; }
+        .feedWrap .feedHeader .userDetails h2 span {
+          position: relative; }
+          .feedWrap .feedHeader .userDetails h2 span:after {
+            position: absolute;
+            border-bottom: 1px solid #fff;
+            left: 0;
+            bottom: -3.4rem;
+            height: 1px;
+            width: 100%;
+            content: ""; }
+      .feedWrap .feedHeader .userDetails .nameLocation,
+      .feedWrap .feedHeader .userDetails .follow {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        font-weight: 100; }
+        .feedWrap .feedHeader .userDetails .nameLocation p,
+        .feedWrap .feedHeader .userDetails .follow p {
+          margin-top: 0; }
+      .feedWrap .feedHeader .userDetails .follow p {
+        margin-bottom: 0; }
+  .feedWrap .tweetWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    flex: 1; }
+    .feedWrap .tweetWrap .tweet {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      background-color: #fff;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      overflow: hidden; }
+      .feedWrap .tweetWrap .tweet .tweetHeader {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #faff00;
+        padding: 0 .5rem;
+        width: 100%; }
+      .feedWrap .tweetWrap .tweet .tweetBody {
+        padding: 1rem;
+        font-weight: 300; }
+      .feedWrap .tweetWrap .tweet .tweetCta {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        border-top: 2px solid #eee; }
+        .feedWrap .tweetWrap .tweet .tweetCta button {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          margin: .5rem 0; }
+          .feedWrap .tweetWrap .tweet .tweetCta button h3 {
+            margin: 0;
+            padding: .1rem;
+            color: #dd00f0; }
+    .feedWrap .tweetWrap .newComment {
+      width: 80%; }
+      .feedWrap .tweetWrap .newComment .commentText {
+        display: flex;
+        flex-direction: column; }
+        .feedWrap .tweetWrap .newComment .commentText .addNewComment {
+          padding: 1rem;
+          border-radius: 7px;
+          border: 1px solid #a4a4a4; }
+        .feedWrap .tweetWrap .newComment .commentText button {
+          display: flex;
+          justify-content: center;
+          align-self: flex-end;
+          margin-top: 1rem;
+          padding: .5rem 2rem;
+          background-color: #000;
+          color: #faff00;
+          border: none;
+          border-radius: 4px; }
+  .feedWrap .newTweet {
+    position: sticky;
+    bottom: 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: #000;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid #faff00;
+    border-radius: 50%; }

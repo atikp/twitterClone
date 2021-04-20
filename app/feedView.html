@@ -8,49 +8,52 @@
 		<title>Twitter Home</title>
 	</head>
 	<body>
-		<div class="feedHeader">
-      <div class="profilePic">
-        <img src="./img/camera 1.png" alt="profilePic">
-      </div>
-      <div class="userDetails">
-        <h2 class="userName">Username</h2>
-        <div class="nameLocation">
-          <h3 class="userTag">@username</h3>
-          <h3 class="location">London, UK</h3>
-        </div>
-        <div class="follow">
-          <p>245 <span>followers</span></p>
-          <p>132 <span>following</span></p>
-        </div>
+    <div class="feedWrap">
 
-      </div>
-		</div>
-    <div class="tweetWrap">
-      <div class="tweet">
-        <div class="tweetHeader">
-          <h3 class="username">JOHN Smith</h3>
-          <p class="tweetDate">12/12/2020</p>
+      <div class="feedHeader">
+        <div class="profilePic">
+          <img src="./img/camera 1.png" alt="profilePic">
         </div>
-        <div class="tweetBody">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eius ea veniam, accusantium repellendus temporibus natus delectus consequuntur autem sunt odit alias porro neque provident molestiae ab vero aliquam doloremque?
-        </div>
-        <div class="tweetCta">
-          <button><img src="./img/notLiked.png" alt=""><h3>25</h3></button>
-          <button><img src="./img/NotRetweeted.png" alt=""><h3>5</h3></button>
-          <button><img src="./img/comment.png" alt=""><h3>25</h3></button>
+        <div class="userDetails">
+          <h2 class="userName"><span>Username</span></h2>
+          <div class="nameLocation">
+            <p class="userTag">@username</p>
+            <p class="location">Location</p>
+          </div>
+          <div class="follow">
+            <p class="followers"> <span>0</span> followers</p>
+            <p class="following"><span>0</span> following</p>
+          </div>
+          
         </div>
       </div>
-      <div class="newComment">
-        <form action="submit" class="commentText">
-          <textarea name="addNewComment" id="addNewComment" cols="30" rows="10" placeholder="Your comment"></textarea>
-          <button type="submit">Reply</button>
-        </form>
+      <div class="tweetWrap">
+        <div class="tweet">
+          <div class="tweetHeader">
+            <h3 class="username">JOHN Smith</h3>
+            <p class="tweetDate">12/12/2020</p>
+          </div>
+          <div class="tweetBody">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eius ea veniam, accusantium repellendus temporibus natus delectus consequuntur autem sunt odit alias porro neque provident molestiae ab vero aliquam doloremque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veniam, atque ullam quo non libero quis consectetur. Voluptatem repellendus cumque maiores earum deleniti. Inventore omnis enim numquam est ullam eius. lorem
+          </div>
+          <div class="tweetCta">
+            <button><img src="./img/notLiked.png" alt=""><h3>25</h3></button>
+            <button><img src="./img/NotRetweeted.png" alt=""><h3>5</h3></button>
+            <button><img src="./img/comment.png" alt=""><h3>25</h3></button>
+          </div>
+        </div>
+        <div class="newComment">
+          <form action="submit" class="commentText">
+            <textarea name="addNewComment" class="addNewComment" cols="30" rows="10" placeholder="Your comment"></textarea>
+            <button type="submit">Reply</button>
+          </form>
+        </div>
       </div>
+      <div class="newTweet"><a href="#"><img src="./img/newTweet.png" alt="newTweetButton"></a></div>
+      
+      
+      
     </div>
-    <div class="newTweet"><a href="#"><img src="./img/newTweet.png" alt="newTweetButton"></a></div>
-    
-
-
-	</body>
-	<script type="module" src="./js/index.js"></script>
-</html>
+    <script type="module" src="./js/index.js"></script>
+    </body>
+    </html>

@@ -3,27 +3,43 @@
       {
         "id": 1,
         "name": "Savanna Schulist",
-        "avatar_url": "https://robohash.org/Savanna Schulist.png?size=300x300&set=set1"
+        "avatar_url": "https://robohash.org/Savanna Schulist.png?size=300x300&set=set1",
+        "location":"New York, US",
+        "followers": 100,
+        "following":12
+
       },
       {
         "id": 2,
         "name": "Elbert Beer",
-        "avatar_url": "https://robohash.org/Elbert Beer.png?size=300x300&set=set1"
+        "avatar_url": "https://robohash.org/Elbert Beer.png?size=300x300&set=set1",
+        "location":"Geneva, SZ",
+        "followers":122,
+        "following":12
       },
       {
         "id": 3,
         "name": "Fanny Zemlak",
-        "avatar_url": "https://robohash.org/Fanny Zemlak.png?size=300x300&set=set1"
+        "avatar_url": "https://robohash.org/Fanny Zemlak.png?size=300x300&set=set1",
+        "location":"Paris, FR",
+        "followers": 332,
+        "following":15
       },
       {
         "id": 4,
         "name": "Omari Ledner",
-        "avatar_url": "https://robohash.org/Omari Ledner.png?size=300x300&set=set1"
+        "avatar_url": "https://robohash.org/Omari Ledner.png?size=300x300&set=set1",
+        "location":"Leicester, UK",
+        "followers": 312,
+        "following":17
       },
       {
         "id": 5,
         "name": "Chasity Johns",
-        "avatar_url": "https://robohash.org/Chasity Johns.png?size=300x300&set=set1"
+        "avatar_url": "https://robohash.org/Chasity Johns.png?size=300x300&set=set1",
+        "location":"London, UK",
+        "followers": 122,
+        "following":123
       }
     ],
     "tweets": [
