@@ -2,13 +2,12 @@
 
 $primary: #faff00;
 $secondary: #dd00f0;
-*{
+* {
   box-sizing: border-box;
 }
 body {
   font-family: "Roboto", sans-serif;
   position: relative;
-  
 }
 .loginWrap {
   position: relative;
@@ -90,9 +89,9 @@ body {
   position: relative;
   background: url("../img/peopleNshapes/newTweetBG.png");
   background-repeat: no-repeat;
-  background-position:  bottom 100% right;
-  height:100vh;
-  flex:1;
+  background-position: bottom 100% right;
+  height: 100vh;
+  flex: 1;
   .feedHeader {
     display: flex;
     color: #fff;
@@ -107,7 +106,7 @@ body {
       margin: 1rem;
       overflow: hidden;
 
-      img{
+      img {
         max-width: 110%;
       }
     }
@@ -147,105 +146,343 @@ body {
           margin-top: 0;
         }
       }
-      .follow{
-        p{
+      .follow {
+        p {
           margin-bottom: 0;
         }
       }
     }
-
   }
-  .tweetWrap{
+  .tweetWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:100vh;
-    flex:1;
-    .tweet{
+    min-height: 100vh;
+    flex: 1;
+    .tweet {
       display: flex;
       position: relative;
       flex-direction: column;
-      align-items:center;
-      width:80%;
+      align-items: center;
+      width: 80%;
       background-color: #fff;
       margin-top: 1.5rem;
       border-radius: 5px;
       overflow: hidden;
-      .tweetHeader{
+      .tweetHeader {
         display: flex;
         position: relative;
         justify-content: space-between;
         align-items: center;
-        background-color:$primary;
-        padding:0 .5rem;
-        width:100%;
-        
-        
+        background-color: $primary;
+        padding: 0 0.5rem;
+        width: 100%;
       }
-      .tweetBody{
-        padding:1rem;
+      .tweetBody {
+        padding: 1rem;
         font-weight: 300;
-      
       }
-      .tweetCta{
+      .tweetCta {
         display: flex;
-        justify-content:space-around;
-        width:100%;
+        justify-content: space-around;
+        width: 100%;
         border-top: 2px solid #eee;
-        button{
+        button {
           display: flex;
-          justify-content:space-between;
+          justify-content: space-between;
           align-items: center;
-          background-color:transparent;
+          background-color: transparent;
           border: none;
-          margin: .5rem 0;
-          h3{
-            margin:0;
-            padding:.1rem;
-            color:$secondary;
+          margin: 0.5rem 0;
+          h3 {
+            margin: 0;
+            padding: 0.1rem;
+            color: $secondary;
           }
         }
       }
     }
-    .newComment{
-      width:80%;
-      .commentText{
+    .newComment {
+      width: 80%;
+      .commentText {
         display: flex;
         flex-direction: column;
-        
-        .addNewComment{
-          padding:1rem;
+
+        .addNewComment {
+          padding: 1rem;
           border-radius: 7px;
-          border:1px solid rgb(164, 164, 164);
+          border: 1px solid rgb(164, 164, 164);
         }
-        button{
+        button {
           display: flex;
-          justify-content:center;
+          justify-content: center;
           align-self: flex-end;
           margin-top: 1rem;
-          padding:.5rem 2rem;
+          padding: 0.5rem 2rem;
           background-color: #000;
-          color:$primary;
-          border:none;
+          color: $primary;
+          border: none;
           border-radius: 4px;
-
         }
       }
     }
   }
-  .newTweet{
-    position:sticky;
-    bottom:1rem;
+  .newTweet {
+    position: sticky;
+    bottom: 1rem;
     margin-left: auto;
     margin-right: 1rem;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     align-self: flex-end;
-    background-color:#000;
-    width:4rem;
-    height:4rem;
-    border:3px solid $primary;
+    background-color: #000;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid $primary;
     border-radius: 50%;
   }
+}
+.newTweetHeader {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("../img/peopleNshapes/newTweetBG.png");
+  background-repeat: no-repeat;
+  background-position: top 70px right;
+  height: 100vh;
+
+  button.backButton {
+    position: absolute;
+    top: 20px;
+    background: url("../img/backArrowYellow.png");
+    background-position: bottom 100% right;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 2rem;
+    border: none;
+  }
+  form {
+    display: flex;
+    width: 100%;
+    background-color: #000;
+    &::after {
+      position: absolute;
+      top: 55px;
+      content: "";
+      width: 100%;
+      background-color: $primary;
+      height: 1px;
+    }
+    button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $primary;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1.5rem;
+    }
+    textarea {
+      margin: 5rem auto 0 auto;
+      border: 1px solid $primary;
+      border-radius: 5px;
+      padding: 1rem;
+      background-color: #000;
+      color: #fff;
+      outline: none;
+
+      &::placeholder {
+        opacity: 0.4;
+        color: $primary;
+      }
+    }
+  }
+}
+.commentsPageWrap {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  min-height:100vh;
+  padding: 0;
+  margin: 0;
+  .commentsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $primary;
+    border-bottom: 1px solid $primary;
+    button.backButton {
+      background: url("../img/backArrowYellow.png");
+      background-repeat: no-repeat;
+      height: .5rem;
+      width: 2rem;
+      border: none;
+      margin:1.4rem;
+    }
+    h2{
+      font-weight: 400;
+    }
+  }
+  .mainTweet {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    .tweetHeader {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .profilePic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        margin: 1rem 1rem 1rem 0;
+        overflow: hidden;
+        img {
+          max-width: 110%;
+        }
+      }
+      .userDetails {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        border-bottom: 1px solid $secondary;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        h2 {
+          position: relative;
+          margin-bottom: 0;
+          span {
+            position: relative;
+            &:after {
+              position: absolute;
+              border-bottom: 1px solid #fff;
+              left: 0;
+              bottom: -3rem;
+              height: 1px;
+              width: 100%;
+              content: "";
+            }
+          }
+        }
+        .userTag{
+          margin-top: 0;
+          font-weight: 100;
+        }
+      }
+    }
+    .tweetBody {
+      p{
+        font-weight: 200;
+      }
+      .tweetCta {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        button {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          margin: 0.5rem 0;
+          h3 {
+            margin: 0;
+            padding: 0.1rem;
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .allComments{
+    display: flex;
+    flex-direction: column;
+    margin:1rem;
+    .commentWrap{
+      margin:1rem 0;
+      .commentHeader{
+        display: flex;
+        height:3rem;
+        .profilePic {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $primary;
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          margin: 0 1rem 0 0 ;
+          overflow: hidden;
+          img {
+            max-width: 110%;
+          }
+        }
+        .userDetails {
+          display: flex;
+          align-items: center;
+          width: 70%;
+          border-bottom: 1px solid $secondary;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+          h3.userName {
+            margin: 0;
+            position: relative;
+            span {
+              position: relative;
+              &:after {
+                position: absolute;
+                border-bottom: 1px solid #fff;
+                left: 0;
+                bottom: -1rem;
+                height: 1px;
+                width: 100%;
+                content: "";
+              }
+            }
+          }
+          .userTag{
+            margin: 0 0 0 1rem;
+            font-weight: 100;
+          }
+        }
+      }
+      .commentBody{
+        border-bottom: 1px solid #ddd;
+        p{
+          font-weight: 200;
+        }
+      }
+    }
+  }
+  .newComment{
+    position: sticky;
+    bottom: 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: $primary;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid $primary;
+    border-radius: 50%;
+    .addNewComment{
+      display: flex;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+.hidden {
+  display: none;
 }

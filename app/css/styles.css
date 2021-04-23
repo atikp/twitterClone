@@ -129,7 +129,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     flex: 1; }
     .feedWrap .tweetWrap .tweet {
       display: flex;
@@ -147,7 +147,7 @@ body {
         justify-content: space-between;
         align-items: center;
         background-color: #faff00;
-        padding: 0 .5rem;
+        padding: 0 0.5rem;
         width: 100%; }
       .feedWrap .tweetWrap .tweet .tweetBody {
         padding: 1rem;
@@ -163,10 +163,10 @@ body {
           align-items: center;
           background-color: transparent;
           border: none;
-          margin: .5rem 0; }
+          margin: 0.5rem 0; }
           .feedWrap .tweetWrap .tweet .tweetCta button h3 {
             margin: 0;
-            padding: .1rem;
+            padding: 0.1rem;
             color: #dd00f0; }
     .feedWrap .tweetWrap .newComment {
       width: 80%; }
@@ -182,7 +182,7 @@ body {
           justify-content: center;
           align-self: flex-end;
           margin-top: 1rem;
-          padding: .5rem 2rem;
+          padding: 0.5rem 2rem;
           background-color: #000;
           color: #faff00;
           border: none;
@@ -201,3 +201,206 @@ body {
     height: 4rem;
     border: 3px solid #faff00;
     border-radius: 50%; }
+
+.newTweetHeader {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("../img/peopleNshapes/newTweetBG.png");
+  background-repeat: no-repeat;
+  background-position: top 70px right;
+  height: 100vh; }
+  .newTweetHeader button.backButton {
+    position: absolute;
+    top: 20px;
+    background: url("../img/backArrowYellow.png");
+    background-position: bottom 100% right;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 2rem;
+    border: none; }
+  .newTweetHeader form {
+    display: flex;
+    width: 100%;
+    background-color: #000; }
+    .newTweetHeader form::after {
+      position: absolute;
+      top: 55px;
+      content: "";
+      width: 100%;
+      background-color: #faff00;
+      height: 1px; }
+    .newTweetHeader form button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #faff00;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1.5rem; }
+    .newTweetHeader form textarea {
+      margin: 5rem auto 0 auto;
+      border: 1px solid #faff00;
+      border-radius: 5px;
+      padding: 1rem;
+      background-color: #000;
+      color: #fff;
+      outline: none; }
+      .newTweetHeader form textarea::placeholder {
+        opacity: 0.4;
+        color: #faff00; }
+
+.commentsPageWrap {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0; }
+  .commentsPageWrap .commentsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #faff00;
+    border-bottom: 1px solid #faff00; }
+    .commentsPageWrap .commentsHeader button.backButton {
+      background: url("../img/backArrowYellow.png");
+      background-repeat: no-repeat;
+      height: .5rem;
+      width: 2rem;
+      border: none;
+      margin: 1.4rem; }
+    .commentsPageWrap .commentsHeader h2 {
+      font-weight: 400; }
+  .commentsPageWrap .mainTweet {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; }
+    .commentsPageWrap .mainTweet .tweetHeader {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .commentsPageWrap .mainTweet .tweetHeader .profilePic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #faff00;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        margin: 1rem 1rem 1rem 0;
+        overflow: hidden; }
+        .commentsPageWrap .mainTweet .tweetHeader .profilePic img {
+          max-width: 110%; }
+      .commentsPageWrap .mainTweet .tweetHeader .userDetails {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        border-bottom: 1px solid #dd00f0;
+        margin-bottom: 1rem;
+        margin-right: 1rem; }
+        .commentsPageWrap .mainTweet .tweetHeader .userDetails h2 {
+          position: relative;
+          margin-bottom: 0; }
+          .commentsPageWrap .mainTweet .tweetHeader .userDetails h2 span {
+            position: relative; }
+            .commentsPageWrap .mainTweet .tweetHeader .userDetails h2 span:after {
+              position: absolute;
+              border-bottom: 1px solid #fff;
+              left: 0;
+              bottom: -3rem;
+              height: 1px;
+              width: 100%;
+              content: ""; }
+        .commentsPageWrap .mainTweet .tweetHeader .userDetails .userTag {
+          margin-top: 0;
+          font-weight: 100; }
+    .commentsPageWrap .mainTweet .tweetBody p {
+      font-weight: 200; }
+    .commentsPageWrap .mainTweet .tweetBody .tweetCta {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee; }
+      .commentsPageWrap .mainTweet .tweetBody .tweetCta button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        margin: 0.5rem 0; }
+        .commentsPageWrap .mainTweet .tweetBody .tweetCta button h3 {
+          margin: 0;
+          padding: 0.1rem;
+          color: #dd00f0; }
+  .commentsPageWrap .allComments {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; }
+    .commentsPageWrap .allComments .commentWrap {
+      margin: 1rem 0; }
+      .commentsPageWrap .allComments .commentWrap .commentHeader {
+        display: flex;
+        height: 3rem; }
+        .commentsPageWrap .allComments .commentWrap .commentHeader .profilePic {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #faff00;
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          margin: 0 1rem 0 0;
+          overflow: hidden; }
+          .commentsPageWrap .allComments .commentWrap .commentHeader .profilePic img {
+            max-width: 110%; }
+        .commentsPageWrap .allComments .commentWrap .commentHeader .userDetails {
+          display: flex;
+          align-items: center;
+          width: 70%;
+          border-bottom: 1px solid #dd00f0;
+          margin-bottom: 1rem;
+          margin-right: 1rem; }
+          .commentsPageWrap .allComments .commentWrap .commentHeader .userDetails h3.userName {
+            margin: 0;
+            position: relative; }
+            .commentsPageWrap .allComments .commentWrap .commentHeader .userDetails h3.userName span {
+              position: relative; }
+              .commentsPageWrap .allComments .commentWrap .commentHeader .userDetails h3.userName span:after {
+                position: absolute;
+                border-bottom: 1px solid #fff;
+                left: 0;
+                bottom: -1rem;
+                height: 1px;
+                width: 100%;
+                content: ""; }
+          .commentsPageWrap .allComments .commentWrap .commentHeader .userDetails .userTag {
+            margin: 0 0 0 1rem;
+            font-weight: 100; }
+      .commentsPageWrap .allComments .commentWrap .commentBody {
+        border-bottom: 1px solid #ddd; }
+        .commentsPageWrap .allComments .commentWrap .commentBody p {
+          font-weight: 200; }
+  .commentsPageWrap .newComment {
+    position: sticky;
+    bottom: 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: #faff00;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid #faff00;
+    border-radius: 50%; }
+    .commentsPageWrap .newComment .addNewComment {
+      display: flex;
+      background-color: transparent;
+      border: none; }
+
+.hidden {
+  display: none; }
