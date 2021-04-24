@@ -44,7 +44,17 @@ const postComment = async(newComment) =>{
       return await fetch(ONLY_TWEETS_URL+'/'+tweetId ,patchIt).then((response)=> response.json())
   }
 
-
+  const postTweet = async(newTweet) =>{
+    const postIt ={
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(newTweet),
+    }
+    return await fetch(ONLY_TWEETS_URL,postIt).then((response)=> response.json());
+  }
 
 export default {
     getUsers,
@@ -52,5 +62,6 @@ export default {
     getSingleTweet,
     postComment,
     patchLikes,
-    patchRetweets
+    patchRetweets,
+    postTweet
 }
