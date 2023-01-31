@@ -1,5 +1,5 @@
 import API from "./API.js";
-// Your code here
+
 const getAllTweets = API.getTweets();
 let sessionUser = JSON.parse(sessionStorage.getItem("currentUser"));
 let tweetPosition = JSON.parse(sessionStorage.getItem("currentUser")) || 0;
@@ -38,7 +38,7 @@ tweetWrapper.addEventListener('click',()=> {
 backButtons.forEach(backButton => {
   backButton.addEventListener('click',()=>{
     console.log('clicked')
-    // window.history.back();
+    
   })
 })
 
