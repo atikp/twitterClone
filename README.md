@@ -1,4 +1,4 @@
-This was the given information from CODERSINHOODS BootCamp. All code was written and implemented and tested by Me. 
+This was the given information from the CODERSINHOODS BootCamp. All code was written, implemented and tested by Me. 
 
 # Twitter Project
 
