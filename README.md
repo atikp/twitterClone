@@ -1,3 +1,5 @@
+This was the given information from CODERSINHOODS BootCamp. All code was written and implemented and tested by Me. 
+
 # Twitter Project
 
 You're building Twitter!
