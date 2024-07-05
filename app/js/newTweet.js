@@ -33,4 +33,3 @@ newTweetForm.addEventListener('submit',(event)=>{
   API.postTweet(newTweetObject);
   window.location.href = 'feedView.html';
 })
-//create button to send tweet to the api DB
