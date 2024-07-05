@@ -11,7 +11,7 @@ loginSubmit.addEventListener('submit',(event)=>{
     if(user.name == userName.value){
       console.log(user.name)
       console.log(userName);
-      window.location.href = '../feedView.html'
+      window.location.href = '../app/feedView.html'
       const currentUser = JSON.stringify(user);
       sessionStorage.setItem('currentUser', `${currentUser}`);
     }

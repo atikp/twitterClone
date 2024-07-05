@@ -127,14 +127,14 @@
       "userId": 2,
       "content": "A Jedi uses the Force for knowledge and defense, never for attack.",
       "likes": 59,
-      "retweets": 47,
+      "retweets": 50,
       "date": "21/05/2020"
     },
     {
       "id": 12,
       "userId": 2,
       "content": "Don't F*ck It Up",
-      "likes": 4,
+      "likes": 6,
       "retweets": 10,
       "date": "17/05/2020"
     },
@@ -241,6 +241,14 @@
       "retweets": 0,
       "date": "24/04/2021",
       "id": 25
+    },
+    {
+      "userId": 2,
+      "content": "this new tweet was tested in april 2023! it still works :)",
+      "likes": 0,
+      "retweets": 0,
+      "date": "21/04/2023",
+      "id": 26
     }
   ],
   "comments": [
